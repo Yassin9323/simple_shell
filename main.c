@@ -18,8 +18,6 @@ int main (int argc, char **argv)
 						write(STDOUT_FILENO, "\n", 1); 	*/
 					return (status);
 			
-			
-			_printf("%s", argv[0]);
 				
 /*
 		comm = _tokenizer(line);
@@ -27,6 +25,10 @@ int main (int argc, char **argv)
 		status = _executer(comm, argv);
 
 */
+			tokenizer(line, " ");
+
+			printf("%s", argv[0]);
+				
 		
 
 	}
@@ -34,5 +36,5 @@ int main (int argc, char **argv)
 
 
 
-	return 0;
+	return (0);
 }

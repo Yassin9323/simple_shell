@@ -13,7 +13,7 @@ char *_reader (void)
 	if(nn == -1)
 	{
 		free(line);
-		perror(" Error reading input ");
+		perror("Error reading input");
 		return (NULL);
 	}
 
