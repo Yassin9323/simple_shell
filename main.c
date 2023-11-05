@@ -3,11 +3,12 @@
 int main (int argc, char **argv)
 {
 	char *line = NULL;
-	char **comm = NULL;	
+	char *comm = NULL;	
 	int status = 0;
 	(void) argc;
+		(void) argv;
+
 	
-	(void) comm;
 	
 	while(1)
 	{
@@ -17,18 +18,21 @@ int main (int argc, char **argv)
 				if(isatty(STDIN_FILENO)) 	
 						write(STDOUT_FILENO, "\n", 1); 	*/
 					return (status);
-			
+			free(line);
 				
-/*
-		comm = _tokenizer(line);
 
+		comm = _tokenizer(line, " ");
+		printf("comm is : %s\n", comm);
+/*
 		status = _executer(comm, argv);
 
-*/
-			tokenizer(line, " ");
+		_tokenizer(line, " ");
 
-			printf("%s", argv[0]);
+			printf("%s", argv[1]);
 				
+
+*/
+			
 		
 
 	}

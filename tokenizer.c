@@ -1,14 +1,15 @@
 #include "shell.h"
 
-void tokenizer(char *line, char *delim)
+char *_tokenizer(char *line, char *del)
 {
 	char *token;
+	token = strtok(line, del);
 
-	token = strtok(line, delim);
 
 	while (token != NULL)
 	{
-		printf("Token: %s", token);
-		token = strtok(NULL, delim);
+		printf("Token: %s\n", token);
+		token = strtok(NULL, del);
 	}
+	return token;
 }

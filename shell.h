@@ -13,7 +13,7 @@
 
 char *_reader (void);
 void _printf(char *string, int descriptor);
-void tokenizer(char *line, char *delim);
+char *_tokenizer(char *line, char *del);
 
 
 
