@@ -21,8 +21,9 @@ int main (int argc, char **argv)
 			free(line);
 				
 
-		comm = _tokenizer(line, " ");
+		comm = _tokenizer(line);
 		printf("comm is : %s\n", comm);
+		
 /*
 		status = _executer(comm, argv);
 
