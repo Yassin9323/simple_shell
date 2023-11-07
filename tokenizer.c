@@ -9,15 +9,18 @@ char **_tokenizer(char *line)
 	size_t len ;
 	char *tmp = NULL;
 	int x = 0 ; 
-
-	if (tokens == NULL)
-	{
-		perror("Memory allocation error");
-		exit(1);
-	}
+	if(!line)
+			return (NULL);
+	
 	/*		New Edit for realloc	 */
 	tmp = strdup(line);
 	token = strtok(tmp, del);
+	if (token == NULL)
+	{
+		free(line);
+		free(tmp);
+
+	}
 	while(token)
 	{
 			count++;
@@ -51,7 +54,7 @@ char **_tokenizer(char *line)
 		token = strtok(NULL, " ");
 		x++;
 	}
-
+	free(line);
 	tokens[x] = NULL;
 
 	return (tokens);

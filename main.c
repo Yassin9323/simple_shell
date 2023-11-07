@@ -6,7 +6,6 @@ int main (int argc, char **argv)
 	char **tokens;
 	int status = 0;
 	int i;
-	int count = 0;
 	(void) argv;
 	(void) argc;
 	
@@ -26,16 +25,10 @@ int main (int argc, char **argv)
 		for (i = 0; tokens[i] != NULL; i++)
 		{
 			printf("Token %d: %s\n", i, tokens[i]);
-		}
-
-		for (i = 0; i < count; i++)
-			free(tokens[i]);
+			free(tokens[i]) , tokens[i] = NULL;
+		}			
 		
-		free(tokens);
-		free(line);
-
-		count++;
-		
+		free(tokens) , tokens = NULL;		
 	}
 
 
