@@ -20,6 +20,8 @@ int main (int argc, char **argv)
 					return (status);
 
 		tokens = _tokenizer(line);
+		if(!tokens)
+			continue;
 				
 
 		for (i = 0; tokens[i] != NULL; i++)
@@ -28,7 +30,8 @@ int main (int argc, char **argv)
 			free(tokens[i]) , tokens[i] = NULL;
 		}			
 		
-		free(tokens) , tokens = NULL;		
+		free(tokens);
+				
 	}
 
 

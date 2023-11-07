@@ -53,6 +53,7 @@ char **_tokenizer(char *line)
 	free(line);
 	free(token);
 	tokens[x] = NULL;
+	
 
 	return (tokens);
 
