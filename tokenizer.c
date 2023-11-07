@@ -4,8 +4,10 @@ char **_tokenizer(char *line)
 {
 	char **tokens = malloc(sizeof(char*));
 	char *del = " ";
-	char *token;
+	char *token ;
 	int count = 0;
+	size_t len ;
+	
 
 	if (tokens == NULL)
 	{
@@ -13,7 +15,12 @@ char **_tokenizer(char *line)
 		exit(1);
 	}
 
+	 len = strlen(line);
+	if (len > 0 && line[len-1] == '\n')
+			line[len-1] = '\0';
+
 	token = strtok(line, del);
+
 
 	while (token)
 	{
