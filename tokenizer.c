@@ -17,8 +17,8 @@ char **_tokenizer(char *line)
 	token = strtok(tmp, del);
 	if (token == NULL)
 	{
-		free(line);
-		free(tmp);
+		free(line) , line = NULL;
+		free(tmp) , tmp = NULL;
 
 	}
 	while(token)
@@ -45,16 +45,13 @@ char **_tokenizer(char *line)
 
 	while (token)
 	{
-		if (tokens == NULL)
-		{
-			perror("Memory allocation error");
-			exit(1);
-		}
+		
 		tokens[x] = strdup(token);
 		token = strtok(NULL, " ");
 		x++;
 	}
 	free(line);
+	free(token);
 	tokens[x] = NULL;
 
 	return (tokens);
