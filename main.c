@@ -2,12 +2,13 @@
 
 int main (int argc, char **argv)
 {
-	char *line = NULL;
-	char *comm = NULL;	
+	char *line;
+	char **tokens;
 	int status = 0;
+	int i;
+	int count = 0;
+	(void) argv;
 	(void) argc;
-		(void) argv;
-
 	
 	
 	while(1)
@@ -18,24 +19,23 @@ int main (int argc, char **argv)
 				if(isatty(STDIN_FILENO)) 	
 						write(STDOUT_FILENO, "\n", 1); 	*/
 					return (status);
-			free(line);
+
+		tokens = _tokenizer(line);
 				
 
-		comm = _tokenizer(line);
-		printf("comm is : %s\n", comm);
+		for (i = 0; tokens[i] != NULL; i++)
+		{
+			printf("Token %d: %s\n", i, tokens[i]);
+		}
+
+		for (i = 0; i < count; i++)
+			free(tokens[i]);
 		
-/*
-		status = _executer(comm, argv);
+		free(tokens);
+		free(line);
 
-		_tokenizer(line, " ");
-
-			printf("%s", argv[1]);
-				
-
-*/
-			
+		count++;
 		
-
 	}
 
 

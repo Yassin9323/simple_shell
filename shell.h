@@ -13,7 +13,7 @@
 
 char *_reader (void);
 void _printf(char *string, int descriptor);
-char *_tokenizer(char *line);
+char **_tokenizer(char *line);
 
 
 
