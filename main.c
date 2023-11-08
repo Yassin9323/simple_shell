@@ -5,8 +5,6 @@ int main (int argc, char **argv)
 	char *line;
 	char **tokens;
 	int status = 0;
-	int i;
-	(void) argv;
 	(void) argc;
 	
 	
@@ -22,15 +20,12 @@ int main (int argc, char **argv)
 		tokens = _tokenizer(line);
 		if(!tokens)
 			continue;
+
+		status = _executer(tokens, argv);	
 				
 
-		for (i = 0; tokens[i] != NULL; i++)
-		{
-			printf("Token %d: %s\n", i, tokens[i]);
-			free(tokens[i]) , tokens[i] = NULL;
-		}			
 		
-		free(tokens);
+		
 				
 	}
 

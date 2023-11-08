@@ -8,13 +8,16 @@
 #include <unistd.h>
 #include <errno.h>
 #include <stdbool.h>
+#include <sys/types.h>
+#include <sys/wait.h>
 
+extern char **environ;
 
 
 char *_reader (void);
-void _printf(char *string, int descriptor);
 char **_tokenizer(char *line);
-
+int _executer(char **tokens, char **argv);
+void _free_memory(char **array);
 
 
 #endif
