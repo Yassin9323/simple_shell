@@ -1,26 +1,27 @@
-			Winter Is Coming ---->> It's a title that we love.
+			Winter Is Coming ---->> A name we're fond of.
 Authors:
 Yassin Waleed 
 Yousra Adel 
-			 for more information and how we manage our project visit our trello ...
+			 For more information and how we managed our project, kindly visit our Trello board page:
 
-Let's Talk about our Project ( Simple Shell )
+Now about the magestic project: The Simple Shell
 
-	At first we put a clear map to the project as what we had learned,
-and we made many editions to make our project perfect, then I worked with 
-my partner who is fully cooperated and profiesional person (Yousra Adel),
+	Firstly, we identified the topics that we need to revise and revist before starting the project.
+Then, we put a clear map of the project's structure based on the tasks required baring in mind the time we have to deliver in first deadline.
+As we started coding, we made many editions to the code improving it and attacking errors.
+I worked with my partner who is a fully cooperative and professional person (Yousra Adel).
 
 
-	So lets talk about the files that we made : 
+	As for the files that this project has:
 
- 1) Main.c -------->> this is the main function which everything executed by it.
+ 1) main.c -------->> This is the entry point of the project that has the rest of the functions called inside it.
 
- 2) Shell.h ------->> this file contain all the libraries and function's prototype that we used.
+ 2) shell.h ------->> This file contain all the libraries and the prototypes of functions we created.
 
- 3) Reader.c ------>> its role to take input(commands) from user by (getline() function).
+ 3) reader.c ------>> Its role is to take input(commands) from the user using the getline() function.
 
- 4) Tokenizer.c --->> its role to despite the string from (Reader.c) into tokens to be executed.
+ 4) tokenizer.c --->> Its role is to split the string from reader.c into tokens to be passed to the execution function.
 
- 5) Executer.c ---->> Its role to execute the tokens that we have and print shell commands results.
+ 5) executer.c ---->> Its role is to execute the tokens and print shell commands results.
 
 			To Be Continued............

@@ -6,6 +6,7 @@ int _executer(char **tokens, char **argv)
     int status ;
 
     test = fork();
+
     if(test == 0 ) /* Child process */
     {
            if (execve(tokens[0], tokens, environ) == -1 )
@@ -20,10 +21,6 @@ int _executer(char **tokens, char **argv)
         waitpid(test, &status, 0);
         _free_memory(tokens);
     }
-
-
-
-
 
     return (WEXITSTATUS(status));
 }
