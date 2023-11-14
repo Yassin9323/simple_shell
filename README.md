@@ -1,8 +1,10 @@
-			Winter Is Coming ---->> A name we're fond of.
+				Winter Is Coming ---->> A name we're fond of.
 Authors:
 Yassin Waleed 
-Yousra Adel 
-			 For more information and how we managed our project, kindly visit our Trello board page:
+Yousra Adel
+ 
+	For more information and how we managed our project, kindly visit our Trello board page:
+
 
 Now about the magestic project: The Simple Shell
 

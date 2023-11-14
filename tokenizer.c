@@ -3,7 +3,7 @@
 char **_tokenizer(char *line)
 {
 	char **tokens = malloc(sizeof(char*));
-	char *del = " ";
+	char *del = " /t/n";
 	char *token ;
 	int count = 0;
 	size_t len ;
@@ -19,6 +19,7 @@ char **_tokenizer(char *line)
 	{
 		free(line) , line = NULL;
 		free(tmp) , tmp = NULL;
+		return(NULL);
 
 	}
 	while(token)
