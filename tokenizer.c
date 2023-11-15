@@ -3,7 +3,7 @@
 char **_tokenizer(char *line)
 {
 	char **tokens = NULL;
-	char *del = " ";
+	char *del = " \t\n";
 	char *token =NULL;
 	int count = 0;
 	size_t len ;
@@ -45,7 +45,7 @@ char **_tokenizer(char *line)
 	while (token)
 	{
 		tokens[x] = strdup(token);
-		token = strtok(NULL, " ");
+		token = strtok(NULL, del);
 		x++;
 	}
 	free(line);
