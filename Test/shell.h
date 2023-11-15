@@ -13,17 +13,16 @@
 #include <fcntl.h>
 
 extern char **environ;
-#define DEL " \t\n"
 
 
-char *read_line (void);
+char *_reader (void);
 char **_tokenizer(char *line);
 int _executer(char **tokens, char **argv, int x);
-void freearray2D(char **arr);
+void _free_memory(char **array);
 
 /* Hande Env  , Path , Error */
 char *_getenv(char *variable);
-char *_getpath(char *tokens);
+char *_handlepath(char *tokens);
 void dis_errors(char *name, char *com, int x );
 void reverse_string(char *str, int len);
 char *int_to_asci(int n);

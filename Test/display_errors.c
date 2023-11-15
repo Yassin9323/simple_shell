@@ -1,18 +1,19 @@
 #include "shell.h"
-void dis_errors(char *name, char *cmd, int x )
+
+void dis_errors(char *name, char *com, int x )
 {
-    char *index;
+    char *input;
     char mssg[] = ": not found\n";
-    index = int_to_asci(x);
+    input = int_to_asci(x);
 
     write(STDERR_FILENO, name, strlen(name));
     write(STDERR_FILENO, ": ", 2);
-    write(STDERR_FILENO, index, strlen(index));
+    write(STDERR_FILENO, input, strlen(input));
     write(STDERR_FILENO, ": ", 2);
-    write(STDERR_FILENO, cmd, strlen(cmd));
+    write(STDERR_FILENO, com, strlen(com));
     write(STDERR_FILENO, mssg, strlen(mssg));
 
-    free(index);
+    free(input);
 
 }
 

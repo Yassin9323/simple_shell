@@ -1,7 +1,8 @@
 #include "shell.h"
+
 char *_getenv(char *variable)
 {
-    char *tmp, *value,*key, *env;
+    char *tmp, *key, *value, *env;
     int i;
 
     for(i = 0; environ[i]; i++)

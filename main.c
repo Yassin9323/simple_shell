@@ -1,27 +1,29 @@
 #include "shell.h"
 
-int main (int argc, char **argv)
+int main (int ac, char **argv)
 {
-	char *line;
-	char **tokens;
-	int status = 0, x = 0;
-	(void) argc;
+	char *line =NULL;
+	char **tokens = NULL;
+	int status = 0;
+	int x = 0;
+    (void) ac;
+
 	
 	while(1)
 	{
-		line = _reader();
-			if(line == NULL)		 /*this mean EOF by (ctrl + D) 
+		line = read_line();
+			if(line == NULL)		
 			{
 				if(isatty(STDIN_FILENO)) 	
-						write(STDOUT_FILENO, "\n", 1); 	*/
-					return (status);
-		x++;
+						write(STDOUT_FILENO, "\n", 1); 
+				return (status);
+			}
+		
 		tokens = _tokenizer(line);
 		if(!tokens)
 			continue;
 
-		 
-
-		status = _executer(tokens, argv, x);			
+	
+		status = _executer(tokens, argv, x);		
 	}
 }
