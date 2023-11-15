@@ -17,7 +17,6 @@ for (i = 0; tokens[i]; i++)
         return (NULL);    
     }
 }
-
 path_env = _getenv("PATH");
 /* Handle Unset path */
 if (!path_env)

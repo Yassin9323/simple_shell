@@ -7,7 +7,7 @@ void _free_memory(char **array)
     if(!array)
         return ; 
 
-    for (x = 0; array[x] != NULL; x++)
+    for (x = 0; array[x]; x++)
     {
         free(array[x]);
         array[x] = NULL;

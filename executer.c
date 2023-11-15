@@ -22,10 +22,9 @@ int _executer(char **tokens, char **argv, int x)
             {
                      free(full_command), full_command = NULL;
                      _free_memory(tokens);
-                     exit(0); /* Handle ctrl + D */
             }
     }
-    else 
+    else
     {
         waitpid(test, &status, 0);
         _free_memory(tokens);

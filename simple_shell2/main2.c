@@ -1,11 +1,14 @@
-#include "shell.h"
+#include "shell2.h"
 
 int main (int argc, char **argv)
 {
 	char *line;
 	char **tokens;
-	int status = 0, x = 0;
+    (void) tokens;
+	int status = 0;
 	(void) argc;
+    (void) argv;
+
 	
 	while(1)
 	{
@@ -15,13 +18,13 @@ int main (int argc, char **argv)
 				if(isatty(STDIN_FILENO)) 	
 						write(STDOUT_FILENO, "\n", 1); 	*/
 					return (status);
-		x++;
-		tokens = _tokenizer(line);
+		
+		/*tokens = _tokenizer(line);
 		if(!tokens)
 			continue;
 
 		 
 
-		status = _executer(tokens, argv, x);			
+		/*status = _executer(tokens, argv, x);*/			
 	}
 }
